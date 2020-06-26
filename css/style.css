@@ -33,7 +33,7 @@ header {
     padding: 1rem;
     border: none;
     font-size: 1rem;
-    /*appearance: none;*/
+    appearance: none;
     outline: none;
 }
 /*
@@ -49,7 +49,8 @@ header {
     display: none;
     position: absolute;
     background: transparent;
-    min-width: 100px;
+    width: 100px;
+    background: orange;
     color: #fff;
 }
 
