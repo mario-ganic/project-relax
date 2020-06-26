@@ -13,7 +13,7 @@ body {
     min-height: 100vh;
 }
 
-/*HEADER*/
+/*<--------------HEADER-------------->*/
 
 header {
     display: flex;
@@ -25,9 +25,9 @@ header {
 }
 
 
+/*<--------------DROPDOWN MENU-------------->*/
 
-/*DROPDOWN MENU*/
-.dropBtn {
+#dropBtn {
     background: transparent;
     color: #fff;
     padding: 1rem;
@@ -35,17 +35,12 @@ header {
     font-size: 1rem;
 }
 
-.dropBtn:hover {
+#dropBtn:hover {
     color: teal;
 }
 
-.dropdown {
+#dropdown {
     position: relative;
-}
-
-
-.dropdown:hover .dropContent {
-    display: block;
 }
 
 .dropContent {
@@ -54,7 +49,6 @@ header {
     background: transparent;
     min-width: 160px;
     color: #fff;
-    z-index: 1;
 }
 
 .dropContent a {
@@ -64,10 +58,20 @@ header {
     font-size: 0.9rem;
     display: block;
     background: none;
+    width: 5rem;
 }
 
 .dropContent a:hover {
     color: teal;
+}
+
+/*
+#dropdown:hover .dropContent  {
+    display: block;
+}*/
+
+.show  {
+    display: block;
 }
 
 

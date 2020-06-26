@@ -1,3 +1,12 @@
+const dropBtn = document.querySelector('#dropBtn');
+const dropContent = document.querySelector('.dropContent');
+
+dropBtn.addEventListener('click', function(){
+	dropContent.classList.toggle('show');
+})
+
+
+
 // const container = document.querySelector('.container');
 // const text = document.querySelector('#text');
 
