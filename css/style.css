@@ -27,21 +27,20 @@ header {
     justify-content: space-around;
     align-items: center;
     height: 2.8rem;
-    border-bottom: 2px solid black;
 }
-
-
 
 /*<--------------DROPDOWN MENU-------------->*/
 
 #dropBtn {
     background: transparent;
     color: var(--clr-two);
-    padding: 1rem;
+    padding: 0.4rem;
     border: none;
+    border-bottom: 1px solid var(--clr-one);
     font-size: 1rem;
     appearance: none;
     outline: none;
+
 }
 
 #dropBtn:hover {
@@ -72,6 +71,7 @@ header {
 
 .dropContent li:hover {
     color: var(--clr-one);;
+    cursor: default;
 }
 
 .show  {
@@ -81,11 +81,8 @@ header {
 
 /*MAIN*/
 
-.main {
-    background: url('../images/a.webp');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+.rain {
+    background: url('../images/a.webp') center/cover no-repeat;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -95,10 +92,8 @@ header {
 
 
 .ocean {
-    background: url('../images/ocean.webp');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+    background: url('../images/ocean.webp') center/cover no-repeat;
+
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -107,10 +102,7 @@ header {
 }
 
 .forest {
-    background: url('../images/forest.webp');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+    background: url('../images/forest.webp') center/cover no-repeat;
     overflow: hidden;
     display: flex;
     flex-direction: column;

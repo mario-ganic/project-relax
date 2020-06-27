@@ -18,7 +18,7 @@ ocean.addEventListener('click', function() {
 )
 
 rain.addEventListener('click', function() {
-	body.className = 'main';
+	body.className = 'rain';
 }
 )
 
