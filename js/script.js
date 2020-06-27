@@ -1,12 +1,32 @@
 const dropBtn = document.querySelector('#dropBtn');
-const dropContent = document.querySelector('.dropContent');
+const dropContent = document.querySelectorAll('.dropContent');
 
-dropBtn.addEventListener('click', function(){
-	dropContent.classList.toggle('show');
+dropBtn.addEventListener('click', function() {
+    document.querySelector('.dropContent').classList.toggle('show');
 })
 
 
 
+window.onclick = function(event) {
+    if (!event.target.matches('#dropBtn')) {
+        dropContent.forEach(e => {
+            if (e.classList.contains('show')) {
+                e.classList.remove('show');
+            }
+        })
+		}
+}
+
+
+// window.onclick = function(event) {
+//   if (event.target.matches('#dropBtn')) {
+//     dropContent.classList.toggle('show');
+//   }
+//   else{
+//   	dropContent.classList.remove('show');
+//   }
+
+// } 
 // const container = document.querySelector('.container');
 // const text = document.querySelector('#text');
 
