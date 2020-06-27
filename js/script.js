@@ -1,9 +1,31 @@
 const dropBtn = document.querySelector('#dropBtn');
 const dropContent = document.querySelectorAll('.dropContent');
+const body = document.querySelector('body');
+const ocean = document.querySelector('#ocean');
+const rain = document.querySelector('#rain');
+const forest = document.querySelector('#forest');
+
+
 
 dropBtn.addEventListener('click', function() {
     document.querySelector('.dropContent').classList.toggle('show');
+
 })
+
+ocean.addEventListener('click', function() {
+	body.className = 'ocean';
+}
+)
+
+rain.addEventListener('click', function() {
+	body.className = 'main';
+}
+)
+
+forest.addEventListener('click', function() {
+	body.className = 'forest';
+}
+)
 
 
 
