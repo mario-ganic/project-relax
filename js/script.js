@@ -18,15 +18,6 @@ window.onclick = function(event) {
 }
 
 
-// window.onclick = function(event) {
-//   if (event.target.matches('#dropBtn')) {
-//     dropContent.classList.toggle('show');
-//   }
-//   else{
-//   	dropContent.classList.remove('show');
-//   }
-
-// } 
 // const container = document.querySelector('.container');
 // const text = document.querySelector('#text');
 
