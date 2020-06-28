@@ -4,25 +4,7 @@ const body = document.querySelector('body');
 const ocean = document.querySelector('#ocean');
 const rain = document.querySelector('#rain');
 const forest = document.querySelector('#forest');
-const box1 = document.querySelector('.box1');
-var isPlaying = true;
-var rainSound = new Audio('audio/rain.ogg');
-rainSound.loop = true;
-var isPlaying = false;
 
-function togglePlay() {
-return isPlaying ? rainSound.pause() : rainSound.play();
-};
-
-
-rainSound.onplaying = function() {
-  isPlaying = true;
-};
-rainSound.onpause = function() {
-  isPlaying = false;
-};
-
-box1.addEventListener('click', togglePlay);
 
 dropBtn.addEventListener('click', function() {
     document.querySelector('.dropContent').classList.toggle('show');
