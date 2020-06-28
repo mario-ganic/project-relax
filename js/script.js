@@ -8,7 +8,6 @@ const forest = document.querySelector('#forest');
 
 dropBtn.addEventListener('click', function() {
     document.querySelector('.dropContent').classList.toggle('show');
-
 })
 
 ocean.addEventListener('click', function() {

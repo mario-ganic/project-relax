@@ -94,7 +94,6 @@ header {
 
 .ocean {
     background: url('../images/ocean.webp') center/cover no-repeat;
-
     overflow: hidden;
     display: flex;
     flex-direction: column;
