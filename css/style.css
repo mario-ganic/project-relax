@@ -16,7 +16,7 @@
 
 html,
 body {
-    min-height: 100vh;
+    height: 100vh;
 }
 
 /*<--------------HEADER-------------->*/
@@ -109,4 +109,61 @@ header {
     flex-direction: column;
     align-items: center;
     color: #fff;
+}
+/*SECTION*/
+section {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    min-height: 90vh;
+}
+
+h1{
+    font-size: 1.8em;
+}
+
+.boxes{
+    display: flex;
+}
+
+.box1, .box2, .box3 {
+    height: 100px;
+    width: 100px;
+    border: 1px solid var(--clr-two);
+    margin: 5px;
+    opacity: 0.2;
+}
+
+.box1:hover, .box2:hover, .box3:hover{
+    opacity: 1;
+} 
+
+.box1 {
+    background: url('../images/a.webp') center/cover no-repeat;
+}
+.box2 {
+    background: url('../images/ocean.webp') center/cover no-repeat;
+}
+.box3 {
+    background: url('../images/forest.webp') center/cover no-repeat;
+}
+
+
+
+
+
+/*LINE*/
+#highlighted {
+    display: block;
+    animation: fadeIn ease 9s;
+    font-size: 3.3rem;  
+    color: var(--clr-one);
+}
+
+
+@keyframes fadeIn {
+0% {opacity:0; color: #fff;}
+100% {opacity:1; color: var(--clr-one);}
 }
