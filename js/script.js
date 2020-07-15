@@ -6,10 +6,6 @@ const rain = document.querySelector('#rain');
 const forest = document.querySelector('#forest');
 
 
-<<<<<<< HEAD
-
-=======
->>>>>>> dd34a54c89b54e4e3bd0e102c74f1e5180fe8042
 dropBtn.addEventListener('click', function() {
     document.querySelector('.dropContent').classList.toggle('show');
 })
