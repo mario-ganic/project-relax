@@ -27,6 +27,7 @@ header {
     justify-content: space-around;
     align-items: center;
     height: 2.8rem;
+    background: orange;
 }
 
 /*<--------------DROPDOWN MENU-------------->*/
@@ -139,7 +140,7 @@ h1{
 }
 
 
-button:hover {
+#playButton:hover {
     color: var(--clr-one);
     border:1px solid var(--clr-one);
     border-radius: 100%;
