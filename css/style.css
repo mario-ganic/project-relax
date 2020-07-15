@@ -128,7 +128,7 @@ h1{
     font-size: 2em;
 }
 
-button{
+#playButton{
     height: 3rem;
     width: 3rem;
     margin-top: 1rem;
