@@ -26,6 +26,7 @@ header {
     min-width: 100vw;
     justify-content: space-around;
     align-items: center;
+
 }
 
 /*<--------------DROPDOWN MENU-------------->*/
@@ -119,8 +120,8 @@ section {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /*min-height: 80%;*/
-    margin: auto 0;
+    min-height: 80%;
+    /*margin: auto 0;*/
 }
 
 h1{
