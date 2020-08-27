@@ -54,16 +54,22 @@ dropBtn.addEventListener('click', function() {
 
 ocean.addEventListener('click', function() {
 	body.className = 'ocean';
+    rainSound.pause();
+    forestSound.pause();
 }
 )
 
 rain.addEventListener('click', function() {
 	body.className = 'rain';
+    oceanSound.pause();
+    forestSound.pause();
 }
 )
 
 forest.addEventListener('click', function() {
 	body.className = 'forest';
+    oceanSound.pause();
+    rainSound.pause();
 }
 )
 
