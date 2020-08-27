@@ -8,18 +8,42 @@ const forest = document.querySelector('#forest');
 
 // /PLAY AUDIO/
 const rainSound = new Audio('./audio/rain.ogg');
+const oceanSound = new Audio('./audio/oceansgull.mp3');
+const forestSound = new Audio('./audio/night2.mp3');
 const playButton = document.querySelector('#playButton');
 var isPlaying = false;
 
 playButton.addEventListener('click', () => {
-    isPlaying ? rainSound.pause() : rainSound.play();
+if(body.className === 'rain'){
+        isPlaying ? rainSound.pause() : rainSound.play();
     rainSound.onplaying = function() {
-  isPlaying = true;
+    isPlaying = true;
+    };
+    rainSound.onpause = function() {
+    rainSound.currentTime = 0;  
+    isPlaying = false;
 };
-rainSound.onpause = function() {
-  rainSound.currentTime = 0;  
-  isPlaying = false;
+}
+else if(body.className === 'ocean'){
+        isPlaying ? oceanSound.pause() : oceanSound.play();
+    oceanSound.onplaying = function() {
+    isPlaying = true;
+    };
+    oceanSound.onpause = function() {
+    oceanSound.currentTime = 0;  
+    isPlaying = false;
 };
+}else {
+        isPlaying ? forestSound.pause() : forestSound.play();
+    forestSound.onplaying = function() {
+    isPlaying = true;
+    };
+    forestSound.onpause = function() {
+    forestSound.currentTime = 0;  
+    isPlaying = false;
+};
+}
+
 })
 
 
