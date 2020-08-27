@@ -34,7 +34,6 @@ header {
 #dropBtn {
     background: transparent;
     color: var(--clr-two);
-    color: red;
     padding: 0.4rem;
     border: none;
     border-bottom: 1px solid var(--clr-one);
