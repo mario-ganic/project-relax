@@ -136,6 +136,7 @@ h1{
     border: 2px solid teal;
     background: transparent;
     color: teal;
+    outline: none;
 }
 
 
