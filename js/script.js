@@ -13,37 +13,27 @@ const forestSound = new Audio('./audio/night2.mp3');
 const playButton = document.querySelector('#playButton');
 var isPlaying = false;
 
+
+const audioPlay = (sound) => {
+    isPlaying ? sound.pause() : sound.play();
+    sound.onplaying = function() {
+    isPlaying = true;
+    };
+    sound.onpause = function() {
+    sound.currentTime = 0;  
+    isPlaying = false;
+}};    
+
+
 playButton.addEventListener('click', () => {
 if(body.className === 'rain'){
-        isPlaying ? rainSound.pause() : rainSound.play();
-    rainSound.onplaying = function() {
-    isPlaying = true;
-    };
-    rainSound.onpause = function() {
-    rainSound.currentTime = 0;  
-    isPlaying = false;
-};
+audioPlay(rainSound);
 }
 else if(body.className === 'ocean'){
-        isPlaying ? oceanSound.pause() : oceanSound.play();
-    oceanSound.onplaying = function() {
-    isPlaying = true;
-    };
-    oceanSound.onpause = function() {
-    oceanSound.currentTime = 0;  
-    isPlaying = false;
-};
+audioPlay(oceanSound);
 }else {
-        isPlaying ? forestSound.pause() : forestSound.play();
-    forestSound.onplaying = function() {
-    isPlaying = true;
-    };
-    forestSound.onpause = function() {
-    forestSound.currentTime = 0;  
-    isPlaying = false;
-};
+audioPlay(forestSound);
 }
-
 })
 
 
@@ -113,3 +103,5 @@ window.onclick = function(event) {
 
 
 // setInterval(breathAnimation, totalTime);
+
+
