@@ -148,6 +148,13 @@ h1{
 
 /*LINE*/
 
+
+#textBox {
+    border-top: 1px solid var(--clr-one);
+    border-bottom: 1px solid var(--clr-one);
+    padding: 1rem;
+}
+
 #highlighted {
     display: block;
     animation: fadeIn ease 9s;

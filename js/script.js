@@ -6,6 +6,24 @@ const rain = document.querySelector('#rain');
 const forest = document.querySelector('#forest');
 
 
+// /PLAY AUDIO/
+const rainSound = new Audio('./audio/rain.ogg');
+const playButton = document.querySelector('#playButton');
+var isPlaying = false;
+
+playButton.addEventListener('click', () => {
+    isPlaying ? rainSound.pause() : rainSound.play();
+    rainSound.onplaying = function() {
+  isPlaying = true;
+};
+rainSound.onpause = function() {
+  rainSound.currentTime = 0;  
+  isPlaying = false;
+};
+})
+
+
+// DROP BUTTON
 dropBtn.addEventListener('click', function() {
     document.querySelector('.dropContent').classList.toggle('show');
 })
