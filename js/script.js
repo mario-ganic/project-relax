@@ -18,9 +18,12 @@ const audioPlay = (sound) => {
     isPlaying ? sound.pause() : sound.play();
     sound.onplaying = function() {
     isPlaying = true;
+    playButton.innerHTML = '<i class="fa fas fa-pause fa-2x"></i>'; 
+
     };
     sound.onpause = function() {
-    sound.currentTime = 0;  
+    sound.currentTime = 0;
+    playButton.innerHTML = '<i class="fa fas fa-play fa-2x"></i>'; 
     isPlaying = false;
 }};    
 
