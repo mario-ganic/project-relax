@@ -16,7 +16,7 @@
 
 html,
 body {
-    height: 100vh;
+    height: 100%;
 }
 
 /*<--------------HEADER-------------->*/
@@ -26,7 +26,6 @@ header {
     min-width: 100vw;
     justify-content: space-around;
     align-items: center;
-    height: 2.8rem;
 }
 
 /*<--------------DROPDOWN MENU-------------->*/
@@ -120,7 +119,8 @@ section {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 80%;
+    /*min-height: 80%;*/
+    margin: auto 0;
 }
 
 h1{

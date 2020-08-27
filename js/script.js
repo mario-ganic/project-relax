@@ -5,7 +5,6 @@ const ocean = document.querySelector('#ocean');
 const rain = document.querySelector('#rain');
 const forest = document.querySelector('#forest');
 
-
 // /PLAY AUDIO/
 const rainSound = new Audio('./audio/rain.ogg');
 const oceanSound = new Audio('./audio/oceansgull.mp3');
