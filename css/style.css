@@ -124,26 +124,31 @@ section {
     /*margin: auto 0;*/
 }
 
-h1{
+p{
     font-size: 2em;
 }
 
+h3 {
+    margin-top: 1rem;
+}
+
 #playButton{
-    height: 3rem;
-    width: 3rem;
+    height: 6rem;
+    width: 6rem;
     margin-top: 1rem;
     border-radius: 100%;
-    border: 2px solid teal;
+    border: 2px solid #fff;
     background: transparent;
-    color: teal;
+    color: #fff;
     outline: none;
+    border-radius: 100%;
 }
 
 
 #playButton:hover {
     color: var(--clr-one);
-    border:1px solid var(--clr-one);
-    border-radius: 100%;
+    border: 2px solid var(--clr-one);
+    
 }
 
 
@@ -151,17 +156,14 @@ h1{
 
 
 #textBox {
-    border-top: 1px solid var(--clr-one);
     border-bottom: 1px solid var(--clr-one);
     padding: 1rem;
 }
 
 #highlighted {
-    display: block;
-    animation: fadeIn ease 9s;
-    font-size: 3.3rem;  
+    animation: fadeIn ease-in 2s;
+    font-size: 2rem;  
     color: var(--clr-one);
-    margin: 1rem;
 }
 
 

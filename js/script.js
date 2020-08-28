@@ -5,6 +5,20 @@ const ocean = document.querySelector('#ocean');
 const rain = document.querySelector('#rain');
 const forest = document.querySelector('#forest');
 
+
+
+
+
+
+// ADD QUOTES
+
+
+
+
+
+
+
+
 // /PLAY AUDIO/
 const rainSound = new Audio('./audio/rain.ogg');
 const oceanSound = new Audio('./audio/oceansgull.mp3');
@@ -16,26 +30,26 @@ var isPlaying = false;
 const audioPlay = (sound) => {
     isPlaying ? sound.pause() : sound.play();
     sound.onplaying = function() {
-    isPlaying = true;
-    playButton.innerHTML = '<i class="fa fas fa-pause fa-2x"></i>'; 
+        isPlaying = true;
+        playButton.innerHTML = '<i class="fa fas fa-pause fa-4x"></i>';
 
     };
     sound.onpause = function() {
-    sound.currentTime = 0;
-    playButton.innerHTML = '<i class="fa fas fa-play fa-2x"></i>'; 
-    isPlaying = false;
-}};    
+        sound.currentTime = 0;
+        playButton.innerHTML = '<i class="fa fas fa-play fa-4x"></i>';
+        isPlaying = false;
+    }
+};
 
 
 playButton.addEventListener('click', () => {
-if(body.className === 'rain'){
-audioPlay(rainSound);
-}
-else if(body.className === 'ocean'){
-audioPlay(oceanSound);
-}else {
-audioPlay(forestSound);
-}
+    if (body.className === 'rain') {
+        audioPlay(rainSound);
+    } else if (body.className === 'ocean') {
+        audioPlay(oceanSound);
+    } else {
+        audioPlay(forestSound);
+    }
 })
 
 
@@ -45,36 +59,33 @@ dropBtn.addEventListener('click', function() {
 })
 
 ocean.addEventListener('click', function() {
-	body.className = 'ocean';
+    body.className = 'ocean';
     rainSound.pause();
     forestSound.pause();
-}
-)
+})
 
 rain.addEventListener('click', function() {
-	body.className = 'rain';
+    body.className = 'rain';
     oceanSound.pause();
     forestSound.pause();
-}
-)
+})
 
 forest.addEventListener('click', function() {
-	body.className = 'forest';
+    body.className = 'forest';
     oceanSound.pause();
     rainSound.pause();
-}
-)
+})
 
 
 window.onclick = function(event) {
     if (!event.target.matches('#dropBtn')) {
         dropContent.forEach(e => {
-            if (e.classList.contains('show')) {
-                e.classList.remove('show');
-            }
+            e.classList.remove('show')
+
         })
-		}
+    }
 }
+
 
 
 // const container = document.querySelector('.container');
@@ -105,5 +116,3 @@ window.onclick = function(event) {
 
 
 // setInterval(breathAnimation, totalTime);
-
-
