@@ -58,23 +58,30 @@ dropBtn.addEventListener('click', function() {
     document.querySelector('.dropContent').classList.toggle('show');
 })
 
+
+
+function stopSound(...args) {
+    for (var i = 0; i < args.length; i++) {
+        args[i].pause();
+    }
+}
+
 ocean.addEventListener('click', function() {
     body.className = 'ocean';
-    rainSound.pause();
-    forestSound.pause();
+    stopSound(rainSound, forestSound);
 })
 
 rain.addEventListener('click', function() {
     body.className = 'rain';
-    oceanSound.pause();
-    forestSound.pause();
+    stopSound(oceanSound, forestSound);
 })
 
 forest.addEventListener('click', function() {
     body.className = 'forest';
-    oceanSound.pause();
-    rainSound.pause();
+    stopSound(oceanSound, rainSound);
 })
+
+
 
 
 window.onclick = function(event) {
