@@ -1,5 +1,5 @@
 const dropBtn = document.querySelector('#dropBtn');
-const dropContent = document.querySelectorAll('.dropContent');
+const dropContent = document.querySelector('.dropContent');
 const body = document.querySelector('body');
 const ocean = document.querySelector('#ocean');
 const rain = document.querySelector('#rain');
@@ -54,17 +54,18 @@ playButton.addEventListener('click', (e) => {
 
 
 // DROP BUTTON OPEN AND CLOSE WITH CLICK OUTSIDE
-function closeButton() {
-    dropContent.forEach((element) => {
-        if (element.classList.contains('show')) {
-            window.onclick = function(event) {
-                if (!event.target.matches('#dropBtn')) {
-                     element.classList.remove('show')  
-                }
-            }
+
+function closeButton(){
+    if(dropContent.classList.contains('show')){
+        window.onclick = function(event) {
+            if (!event.target.matches('#dropBtn')) {
+                     dropContent.classList.remove('show') 
         }
-    })
+    }}
 }
+
+
+
 
 dropBtn.addEventListener('click', function(e) {
     document.querySelector('.dropContent').classList.toggle('show');
