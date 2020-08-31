@@ -42,7 +42,7 @@ const audioPlay = (sound) => {
 };
 
 
-playButton.addEventListener('click', () => {
+playButton.addEventListener('click', (e) => {
     if (body.className === 'rain') {
         audioPlay(rainSound);
     } else if (body.className === 'ocean') {
@@ -53,15 +53,31 @@ playButton.addEventListener('click', () => {
 })
 
 
-// DROP BUTTON
-dropBtn.addEventListener('click', function() {
+// DROP BUTTON OPEN AND CLOSE WITH CLICK OUTSIDE
+function closeButton() {
+    dropContent.forEach((element) => {
+        if (element.classList.contains('show')) {
+            window.onclick = function(event) {
+                if (!event.target.matches('#dropBtn')) {
+                     element.classList.remove('show')  
+                }
+            }
+        }
+    })
+}
+
+dropBtn.addEventListener('click', function(e) {
     document.querySelector('.dropContent').classList.toggle('show');
+    closeButton();
 })
 
 
 
+
+
+
 function stopSound(...args) {
-    for (var i = 0; i < args.length; i++) {
+    for (let i = 0; i < args.length; i++) {
         args[i].pause();
     }
 }
@@ -82,16 +98,6 @@ forest.addEventListener('click', function() {
 })
 
 
-
-
-window.onclick = function(event) {
-    if (!event.target.matches('#dropBtn')) {
-        dropContent.forEach(e => {
-            e.classList.remove('show')
-
-        })
-    }
-}
 
 
 
