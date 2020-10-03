@@ -59,8 +59,8 @@ function closeButton(){
     if(dropContent.classList.contains('show')){
         window.onclick = function(event) {
             if (!event.target.matches('#dropBtn')) {
-                     dropContent.classList.remove('show') 
-        }
+                dropContent.classList.remove('show') 
+            }
     }}
 }
 
